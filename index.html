@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice to Text</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1><i class="fa-solid fa-microphone-lines"></i> Voice to Text</h1>
+    <p class="subtitle">Speak in any language and watch it turn into text</p>
+
+    <div class="language-box">
+      <label><i class="fa-solid fa-globe"></i> Language</label>
+
+      <div class="dropdown" id="dropdown">
+        <button type="button" id="langToggle" class="lang-toggle">
+          <span id="langLabel">Bangla (Bangladesh)</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="lang-menu" id="langMenu">
+          <div class="search-wrap">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="langSearch" placeholder="Search language..." autocomplete="off" />
+          </div>
+          <ul id="langList"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="startBtn" class="btn start">
+        <i class="fa-solid fa-microphone"></i> Start
+      </button>
+      <button id="stopBtn" class="btn stop">
+        <i class="fa-solid fa-stop"></i> Stop
+      </button>
+    </div>
+
+    <p id="status" class="status">
+      <i class="fa-solid fa-circle-info"></i> Ready
+    </p>
+
+    <textarea id="output" placeholder="Your words will appear here..."></textarea>
+
+    <div class="actions">
+      <button id="copyBtn" class="btn copy">
+        <i class="fa-regular fa-copy"></i> Copy
+      </button>
+      <button id="clearBtn" class="btn clear">
+        <i class="fa-solid fa-trash-can"></i> Clear
+      </button>
+    </div>
+  </div>
+
+  <script src="languages.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
